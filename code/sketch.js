@@ -9,8 +9,14 @@ function draw(){
 
   background(0);
 
-  fill(240,97,97);
-  rect(0,0, 100, 100, 20);
+  //translate(width/2, height/2);
+  stroke(180,97,97);
+
+  //Centre Cross
+  line(width/2,0, width/2,height);
+  line(0,height/2, height,height/2);
+
+
 
 }// end draw()
 
