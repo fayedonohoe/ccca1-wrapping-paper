@@ -8,7 +8,7 @@ function setup(){
 
 function draw(){
 
-  let step = height/numberOfLines;
+  let step = height/(numberOfLines*2);
   let x = width/2;
   let y = 0;
 
