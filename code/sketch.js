@@ -1,3 +1,4 @@
+let numberOfLines = 10; //per quadrant
 
 function setup(){
   createCanvas(500,500);
@@ -6,6 +7,11 @@ function setup(){
 }
 
 function draw(){
+
+  let step = height/numberOfLines;
+  let x = width/2;
+  let y = 0;
+
 
   background(0);
 
@@ -16,6 +22,12 @@ function draw(){
   line(width/2,0, width/2,height);
   line(0,height/2, height,height/2);
 
+  // for each increment of y, x goes from centre to zero then centre to width
+  for (let i = 0; i <= height/2; i += step ){
+    line(width/2,y, x,height/2);
+    x -= step;
+    y += step;
+  }
 
 
 }// end draw()
