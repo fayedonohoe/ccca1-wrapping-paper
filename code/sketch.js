@@ -12,6 +12,8 @@ function draw(){
   let x = width/2;
   let y = 0;
 
+  numberOfLines = map(mouseX, 0,width, 3,15);
+
   background(0);
 
   //translate(width/2, height/2);
