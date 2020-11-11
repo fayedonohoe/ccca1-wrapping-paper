@@ -21,7 +21,7 @@ function draw(){
   background(0);
 
   //translate(canW/2, canH/2);
-  stroke(180,97,97);
+  stroke(189,78,92);
 
   //Centre Cross
   line(canW/2,0, canW/2,canH);
@@ -95,51 +95,54 @@ function draw(){
   //     y -= step;
   //   }
   // pop()
-  //
-  //
-  // //Middle
-  // //reset vars
-  // let midSize = canW/4;
-  // x = canW/2;
-  // y = midSize;
-  //
-  // numberOfLinesMID = map(mouseY, 0,canW, 3,15);
-  // step = (canH/2)/numberOfLines;
-  //
-  // stroke(189,33,92);
-  // // push()
-  // // translate(canW/2, canH/2);
-  // // rotate(mouseY);
-  //
-  //
-  // //Quadrant 1
-  //   for (let i = 0; i <= canH/4; i += step ){
-  //     line(canW/2,y, x,canH/2);
-  //     x -= step;
-  //     y += step;
-  //   }
-  //
-  //   //Quadrant 3
-  //   for (let i = 0; i <= canH/4; i += step ){
-  //     line(canW/2,y, x,canH/2);
-  //     x += step;
-  //     y += step;
-  //   }
-  //
-  //   //Quadrant 4
-  //   for (let i = 0; i <= canH/4; i += step ){
-  //     line(canW/2,y, x,canH/2);
-  //     x += step;
-  //     y -= step;
-  //   }
-  //
-  //   //Quadrant 2
-  //   for (let i = 0; i <= canH/4; i += step ){
-  //     line(canW/2,y, x,canH/2);
-  //     x -= step;
-  //     y -= step;
-  //   }
-  //   pop()
+
+
+
+
+
+  //Middle
+  //reset vars
+  let midSize = canW/4;
+  x = canW/2;
+  y = midSize;
+
+  numberOfLinesMID = map(mouseY, 0,canW, 3,15);
+  step = (canH/2)/numberOfLines;
+
+  stroke(189,33,92);
+  // push()
+  // translate(canW/2, canH/2);
+  // rotate(mouseY);
+
+
+  //Quadrant 1
+    for (let i = 0; i <= canH/4; i += step ){
+      line(canW/2,y, x,canH/2);
+      x -= step;
+      y += step;
+    }
+
+    //Quadrant 3
+    for (let i = 0; i <= canH/4; i += step ){
+      line(canW/2,y, x,canH/2);
+      x += step;
+      y += step;
+    }
+
+    //Quadrant 4
+    for (let i = 0; i <= canH/4; i += step ){
+      line(canW/2,y, x,canH/2);
+      x += step;
+      y -= step;
+    }
+
+    //Quadrant 2
+    for (let i = 0; i <= canH/4; i += step ){
+      line(canW/2,y, x,canH/2);
+      x -= step;
+      y -= step;
+    }
+    pop()
 
 
 
