@@ -26,6 +26,12 @@ function draw(){
 
   background(0);
 
+  for (let j = 0; j<numberOfTiles; j++){
+    for (let i = 0; i<numberOfTiles; i++){
+
+      transValX = i*square;
+      transValY = j*square;
+
   //translate(canW/2, canH/2);
   stroke(189,78,92);
 
