@@ -56,39 +56,90 @@ function draw(){
   }
 
 
+  //
+  // // Smaller
+  // //reset vars
+  // // x = canW/2;
+  // // y = 0;
+  //
+  // //Quadrant 1
+  // push()
+  // translate(canW/2, canH/2);
+  // rotate(mouseY);
+  //   for (let i = 0; i <= canH/2; i += step ){
+  //     line(canW/2,y, x,canH/2);
+  //     x -= step;
+  //     y += step;
+  //   }
+  //
+  //   //Quadrant 3
+  //   for (let i = 0; i <= canH/2; i += step ){
+  //     line(canW/2,y, x,canH/2);
+  //     x += step;
+  //     y += step;
+  //   }
+  //
+  //   //Quadrant 4
+  //   for (let i = 0; i <= canH/2; i += step ){
+  //     line(canW/2,y, x,canH/2);
+  //     x += step;
+  //     y -= step;
+  //   }
+  //
+  //   //Quadrant 2
+  //   for (let i = 0; i <= canH/2; i += step ){
+  //     line(canW/2,y, x,canH/2);
+  //     x -= step;
+  //     y -= step;
+  //   }
+  // pop()
 
-  // Smaller
+
+
+
+
+  //Middle
+  //reset vars
+  let midSize = canW/4;
+  x = canW/2;
+  y = midSize;
+  step = (canH/2)/numberOfLines;
+
+  stroke(255);
+  //push()
+  // translate(canW/2, canH/2);
+  // rotate(mouseY);
+
+
   //Quadrant 1
-
-  rotate(mouseY);
-  push();
-    for (let i = 0; i <= canH/2; i += step ){
+    for (let i = 0; i <= canH/4; i += step ){
       line(canW/2,y, x,canH/2);
       x -= step;
       y += step;
     }
 
     //Quadrant 3
-    for (let i = 0; i <= canH/2; i += step ){
+    for (let i = 0; i <= canH/4; i += step ){
       line(canW/2,y, x,canH/2);
       x += step;
       y += step;
     }
 
     //Quadrant 4
-    for (let i = 0; i <= canH/2; i += step ){
+    for (let i = 0; i <= canH/4; i += step ){
       line(canW/2,y, x,canH/2);
       x += step;
       y -= step;
     }
 
     //Quadrant 2
-    for (let i = 0; i <= canH/2; i += step ){
+    for (let i = 0; i <= canH/4; i += step ){
       line(canW/2,y, x,canH/2);
       x -= step;
       y -= step;
     }
-  pop();
+
+
 
 
 }// end draw()
