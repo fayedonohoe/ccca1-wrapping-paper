@@ -1,4 +1,6 @@
 let numberOfLines = 10; //per quadrant
+let numberOfLinesMID = 10; //per quadrant
+
 let canW = 500;
 let canH = 500;
 
@@ -19,7 +21,7 @@ function draw(){
   background(0);
 
   //translate(canW/2, canH/2);
-  stroke(180,97,97);
+  stroke(189,78,92);
 
   //Centre Cross
   line(canW/2,0, canW/2,canH);
@@ -103,10 +105,12 @@ function draw(){
   let midSize = canW/4;
   x = canW/2;
   y = midSize;
+
+  numberOfLinesMID = map(mouseY, 0,canW, 3,15);
   step = (canH/2)/numberOfLines;
 
-  stroke(255);
-  //push()
+  stroke(189,33,92);
+  // push()
   // translate(canW/2, canH/2);
   // rotate(mouseY);
 
@@ -138,6 +142,7 @@ function draw(){
       x -= step;
       y -= step;
     }
+    pop()
 
 
 
