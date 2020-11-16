@@ -12,6 +12,7 @@ let tile = 50;
 let numberOfTiles = 20;
 let lineLength = tile;
 
+let lines = [];
 let points = [];
 
 function setup(){
@@ -57,6 +58,7 @@ function draw(){
         //Quadrant 1
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
+          lines.push(canW/2, y, x, canH/2);
           x -= step;
           y += step;
         }
@@ -64,6 +66,7 @@ function draw(){
         //Quadrant 3
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
+          lines.push(canW/2, y, x, canH/2);
           x += step;
           y += step;
         }
@@ -71,6 +74,7 @@ function draw(){
         //Quadrant 4
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
+          lines.push(canW/2, y, x, canH/2);
           x += step;
           y -= step;
         }
@@ -78,6 +82,7 @@ function draw(){
         //Quadrant 2
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
+          lines.push(canW/2, y, x, canH/2);
           x -= step;
           y -= step;
         }
