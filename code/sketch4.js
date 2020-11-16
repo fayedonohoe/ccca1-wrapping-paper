@@ -14,6 +14,7 @@ let lineLength = tile;
 
 let lines = [];
 let points = [];
+let intersections = [];
 
 function setup(){
   createCanvas(500,500);
@@ -47,6 +48,9 @@ function draw(){
         stroke(189,78,92);
 
         let rand = round(random(0,3));
+        let p1 = createVector();
+        let p2 = createVector();
+        let tempLine = [];
         //switch (rand) {
 
         //Centre Cross
@@ -58,7 +62,16 @@ function draw(){
         //Quadrant 1
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
-          lines.push(canW/2, y, x, canH/2);
+          p1.x = canW/2;
+          p1.y = y;
+          p2.y = x;
+          p2.y = canH/2;
+
+          tempLine = [p1,p2];
+          lines.push(tempLine);
+
+          points.push(p1,p2);
+          //lines.push(canW/2, y, x, canH/2);
           x -= step;
           y += step;
         }
@@ -66,7 +79,16 @@ function draw(){
         //Quadrant 3
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
-          lines.push(canW/2, y, x, canH/2);
+          p1.x = canW/2;
+          p1.y = y;
+          p2.y = x;
+          p2.y = canH/2;
+
+          tempLine = [p1,p2];
+          lines.push(tempLine);
+
+          points.push(p1,p2);
+          //lines.push(canW/2, y, x, canH/2);
           x += step;
           y += step;
         }
@@ -74,7 +96,16 @@ function draw(){
         //Quadrant 4
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
-          lines.push(canW/2, y, x, canH/2);
+          p1.x = canW/2;
+          p1.y = y;
+          p2.y = x;
+          p2.y = canH/2;
+
+          tempLine = [p1,p2];
+          lines.push(tempLine);
+
+          points.push(p1,p2);
+          //lines.push(canW/2, y, x, canH/2);
           x += step;
           y -= step;
         }
@@ -82,7 +113,16 @@ function draw(){
         //Quadrant 2
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
-          lines.push(canW/2, y, x, canH/2);
+          p1.x = canW/2;
+          p1.y = y;
+          p2.y = x;
+          p2.y = canH/2;
+
+          tempLine = [p1,p2];
+          lines.push(tempLine);
+
+          points.push(p1,p2);
+          //lines.push(canW/2, y, x, canH/2);
           x -= step;
           y -= step;
         }
