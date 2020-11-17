@@ -106,7 +106,7 @@ function draw(){
   x = canW/2;
   y = midSize;
 
-  numberOfLinesMID = map(mouseY, 0,canW, 3,15);
+  numberOfLinesMID = map(mouseX, 0,canW, 3,15);
   step = (canH/2)/numberOfLines;
 
   stroke(189,33,92);

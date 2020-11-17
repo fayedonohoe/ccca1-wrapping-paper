@@ -8,8 +8,8 @@ let transValX;
 let transValY;
 let rotValue;
 
-let tile = 50;
 let numberOfTiles = 20;
+let tile = canW/numberOfTiles;
 let lineLength = tile;
 
 let lines = [];
@@ -20,7 +20,7 @@ function setup(){
   createCanvas(500,500);
   colorMode(HSB, canW, canH); // change colour mode and defined the range as the canW and canH
   rectMode(CENTER);
-  noLoop();
+  // noLoop();
 }
 
 function draw(){
@@ -36,11 +36,11 @@ function draw(){
   for (let j = 0; j<numberOfTiles; j++){
     for (let i = 0; i<numberOfTiles; i++){
 
-      transValX = i*tile+50;
-      transValY = j*tile+50;
+      transValX = i*canW;
+      transValY = j*canH;
 
       push();
-      scale(0.3);
+      scale(0.2);
         translate(transValX,transValY);
         //rotValue = atan2(mouseY-transValY, mouseX-transValX);
         //let distance = dist(mouseX, mouseY, transValX, transValY);
