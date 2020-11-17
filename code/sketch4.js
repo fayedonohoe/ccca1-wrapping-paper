@@ -7,6 +7,7 @@ let canH = 500;
 let transValX;
 let transValY;
 let rotValue;
+let scaleVal;
 
 let numberOfTiles = 20;
 let tile = canW/numberOfTiles;
@@ -30,6 +31,7 @@ function draw(){
   let y = 0;
 
   numberOfLines = map(mouseX, 0,canW, 3,15);
+  scaleVal = map(mouseY, 0,canH, 0.2,1);
 
   background(0);
 
@@ -39,7 +41,7 @@ function draw(){
       transValX = i*canW;
       transValY = j*canH;
 
-      push();
+      push()
       scale(0.2);
         translate(transValX,transValY);
         //rotValue = atan2(mouseY-transValY, mouseX-transValX);
@@ -54,11 +56,13 @@ function draw(){
         //switch (rand) {
 
         //Centre Cross
-        line(canW/2,0, canW/2,canH);
-        line(0,canH/2, canH,canH/2);
+        // line(canW/2,0, canW/2,canH);
+        // line(0,canH/2, canH,canH/2);
 
         // for each increment of y, x goes from centre to zero then centre to canW
 
+        push()
+        scale(scaleVal);
         //Quadrant 1
         for (let i = 0; i <= canH/2; i += step ){
           line(canW/2,y, x,canH/2);
@@ -126,6 +130,7 @@ function draw(){
           x -= step;
           y -= step;
         }
+        pop()
         pop()
 
       } // end inner for
