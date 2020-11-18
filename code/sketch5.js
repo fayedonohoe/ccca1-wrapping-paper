@@ -50,6 +50,7 @@ function draw(){
         let p1 = createVector();
         let p2 = createVector();
         let tempLine = [];
+        lines = [];
         //switch (rand) {
 
         //Centre Cross
@@ -65,7 +66,7 @@ function draw(){
           line(canW/2,y, x,canH/2);
           p1.x = canW/2;
           p1.y = y;
-          p2.y = x;
+          p2.x = x;
           p2.y = canH/2;
 
           tempLine = [p1,p2];
@@ -82,7 +83,7 @@ function draw(){
           line(canW/2,y, x,canH/2);
           p1.x = canW/2;
           p1.y = y;
-          p2.y = x;
+          p2.x = x;
           p2.y = canH/2;
 
           tempLine = [p1,p2];
@@ -99,7 +100,7 @@ function draw(){
           line(canW/2,y, x,canH/2);
           p1.x = canW/2;
           p1.y = y;
-          p2.y = x;
+          p2.x = x;
           p2.y = canH/2;
 
           tempLine = [p1,p2];
@@ -116,7 +117,7 @@ function draw(){
           line(canW/2,y, x,canH/2);
           p1.x = canW/2;
           p1.y = y;
-          p2.y = x;
+          p2.x = x;
           p2.y = canH/2;
 
           tempLine = [p1,p2];
@@ -130,7 +131,7 @@ function draw(){
         //pop()
         pop()
 
-        for(let i=0; i<lines.length; i += 2){
+        for(let i=2; i<lines.length; i += 2){
           //for(let j=0; j<lines.length; j+= 4){
 
             let point1 = lines[i][0] ; //line 1, point 1
