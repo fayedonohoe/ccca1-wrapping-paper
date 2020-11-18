@@ -130,6 +130,36 @@ function draw(){
         //pop()
         pop()
 
+        for(let i=0; i<lines.length; i += 2){
+          //for(let j=0; j<lines.length; j+= 4){
+
+            let point1 = lines[i][0] ; //line 1, point 1
+            let point2  = lines[i][1] ; //line 1, point 2
+
+            let point3  = lines[(i+1)][0] ; //line 2, point 1
+            let point4  = lines[(i+1)][1] ; //line 2, point 2
+
+            let interX =
+            ((point4.x - point3.x) * (point1.y - point3.y) -
+              (point4.y - point3.y) * (point1.x - point3.x))
+              /
+              ((point4.y - point3.y) * (point2.x - point1.x) -
+              (point4.x - point3.x) * (point2.y - point1.y));
+
+            let interY =
+              ((point2.x - point1.x) * (point1.y - point3.y) -
+              (point2.y - point1.y) * (point1.x - point3.x))
+              /
+              ((point4.y - point3.y) * (point2.x - point1.x) -
+              (point4.x - point3.x) * (point2.y - point1.y));
+
+              // let temp inter = [interX, interY];
+              // intersections.push(inter);
+
+              ellipse(interX,interY, 20,20);
+            }//end inner for
+
+
 
 }// end draw()
 
