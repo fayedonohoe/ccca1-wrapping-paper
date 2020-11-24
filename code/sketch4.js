@@ -29,8 +29,8 @@ function draw(){
   let x = canW/2;
   let y = 0;
 
-  numberOfLines = map(mouseX, 0,2480, 3,15);
-  scaleVal = map(mouseY, 0,1754, 0.2,3, true);
+  numberOfLines = map(mouseX, 0,2480, 3,20);
+  scaleVal = map(mouseY, 0,1754, 0.2,3);
 
   background(0);
 
@@ -46,8 +46,9 @@ function draw(){
       scale(0.3);
         translate(transValX,transValY);
 
-        let colour1 = color(148,74,42,0.5);
-        let colour2 = color(20,47,62,0.5);
+        //let colour1 = color(4,5,100,0.5); //White
+        let colour1 = color(148,74,42,0.5); //Green
+        let colour2 = color(20,47,62,0.5);  //Gold
 
         let p1 = createVector();
         let p2 = createVector();
