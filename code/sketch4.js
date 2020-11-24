@@ -1,14 +1,12 @@
 let numberOfLines = 5; //per quadrant
-let numberOfLinesMID = 10; //per quadrant
 
-let canW = 500;
 let canH = 500;
+let canW = 500;
 
 let transValX;
 let transValY;
 let rotValue;
 let scaleVal;
-// let strWeight = 1;
 
 let numberOfTiles = 20;
 let tile = canW/numberOfTiles;
@@ -19,7 +17,7 @@ let points = [];
 let intersections = [];
 
 function setup(){
-  createCanvas(1400,700);
+  createCanvas(2480,1754);
   colorMode(HSB, canW, canH); // change colour mode and defined the range as the canW and canH
   rectMode(CENTER);
   // noLoop();
@@ -31,10 +29,12 @@ function draw(){
   let x = canW/2;
   let y = 0;
 
-  numberOfLines = map(mouseX, 0,canW, 3,15);
-  scaleVal = map(mouseY, 0,canH, 0.2,3);
+  numberOfLines = map(mouseX, 0,2480, 3,15);
+  scaleVal = map(mouseY, 0,1754, 0.2,3, true);
 
   background(0);
+
+  translate(-100,-100);
 
   for (let j = 0; j<numberOfTiles; j++){
     for (let i = 0; i<numberOfTiles; i++){
@@ -43,33 +43,25 @@ function draw(){
       transValY = j*canH;
 
       push()
-      scale(0.2);
+      scale(0.3);
         translate(transValX,transValY);
-        //rotValue = atan2(mouseY-transValY, mouseX-transValX);
-        //let distance = dist(mouseX, mouseY, transValX, transValY);
 
-        //stroke(189,78,92);stroke(285,100,93);
-        let colourBlue = color(189,78,92,0.5);
-        let colourPurple = color(285,100,93,0.5);
+        let colour1 = color(148,74,42,0.5);
+        let colour2 = color(20,47,62,0.5);
 
-
-        let rand = round(random(0,3));
         let p1 = createVector();
         let p2 = createVector();
         let tempLine = [];
-        let strWeight = 1;
-        //switch (rand) {
 
         //Centre Cross
         // line(canW/2,0, canW/2,canH);
         // line(0,canH/2, canH,canH/2);
 
         // for each increment of y, x goes from centre to zero then centre to canW
-
         push()
         scale(scaleVal);
 
-        stroke(colourBlue);
+        stroke(colour1);
         //Quadrant 1
         for (let i = 0; i <= canH/2; i += step ){
           strokeWeight( i*.03 );
@@ -88,8 +80,7 @@ function draw(){
           y += step;
         }
 
-        strWeight = 1;
-        stroke(colourPurple);
+        stroke(colour2);
         //Quadrant 3
         for (let i = 0; i <= canH/2; i += step ){
           strokeWeight( i*.03 );
@@ -108,8 +99,7 @@ function draw(){
           y += step;
         }
 
-        strWeight = 1;
-        stroke(colourBlue);
+        stroke(colour1);
 
         //Quadrant 4
         for (let i = 0; i <= canH/2; i += step ){
@@ -129,9 +119,7 @@ function draw(){
           y -= step;
         }
 
-        strWeight = 1;
-        stroke(colourPurple);
-
+        stroke(colour2);
         //Quadrant 2
         for (let i = 0; i <= canH/2; i += step ){
           strokeWeight( i*.03 );
@@ -150,11 +138,10 @@ function draw(){
           y -= step;
         }
         pop()
-        pop()
 
+      pop()
       } // end inner for
     }  // end outer for
-
 }// end draw()
 
 
